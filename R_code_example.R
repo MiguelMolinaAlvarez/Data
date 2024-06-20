@@ -37,7 +37,7 @@ subgroup
 
 
 madata$Time<-as.numeric(madata$Time)
-reg <-metacont(n1,m1,sd1,n2,m2, sd2,studlab = paste(Author),fixed = FALSE,data=madata)
+reg <-metacont(n1,m1,sd1,n2,m2,sd2,data = madata,studlab = paste (Author),fixed = FALSE,random = TRUE,method.tau = "SJ",hakn = TRUE,prediction =TRUE,sm = "SMD")
 reg
 
 output.reg <-metareg(reg,Time)
